@@ -2,6 +2,7 @@ package com.example.restaurante.entity;
 
 import jakarta.persistence.*;
 
+@Entity
 //Anotaciones
 @Table(name = "menu")
 public class Menu {
@@ -24,8 +25,8 @@ public class Menu {
     @Column(name = "description" , nullable = false)
     private String description;
 
-    @Column(name = "image" , nullable = false)
-    private String image;
+    @Column(name = "url" , nullable = false)
+    private String url;
 
     @Column(name = "category" , nullable = false)
     private String category;
@@ -46,28 +47,29 @@ public class Menu {
 
     //Constructor con parámetros
 
-    public Menu(long id, char rol, Integer name, String price, String description, String image, String category, boolean status, String site, double preparationTime) {
+
+    public Menu(Long id, char rol, Integer name, String price, String description, String url, String category, boolean status, String site, double preparationTime, String message) {
         this.id = id;
         this.rol = rol;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.image = image;
+        this.url = url;
         this.category = category;
         this.status = status;
         this.site = site;
         this.preparationTime = preparationTime;
+        this.message = message;
     }
-
 
     //Getters y setters
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -103,12 +105,12 @@ public class Menu {
         this.description = description;
     }
 
-    public String getImage() {
-        return image;
+    public String getUrl() {
+        return url;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getCategory() {
@@ -141,5 +143,13 @@ public class Menu {
 
     public void setPreparationTime(double preparationTime) {
         this.preparationTime = preparationTime;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

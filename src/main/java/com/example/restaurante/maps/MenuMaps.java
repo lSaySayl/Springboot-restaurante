@@ -33,9 +33,11 @@ public interface MenuMaps {
 
 
 
-    @Mappings({
+  /*  @Mappings({
             @Mapping(source="message", target = "message")
     })
 
     public MenuErrorDTO toMenuErrorDTO(Menu menu);
+
+    */
 }
