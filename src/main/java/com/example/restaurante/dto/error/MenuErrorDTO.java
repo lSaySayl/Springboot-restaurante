@@ -1,6 +1,8 @@
-package com.example.restaurante.dto;
+package com.example.restaurante.dto.error;
 
-public class MenuErrorDTO extends MenuDTO{
+import com.example.restaurante.dto.general.MenuDTO;
+
+public class MenuErrorDTO extends MenuDTO {
 
     private String message;
 

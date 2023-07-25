@@ -36,6 +36,9 @@ public class Menu {
 
     private double preparationTime;
 
+    @Transient //No se va a guardar en la base de datos
+    private String message;
+
     //Constructor vacío
 
     public Menu() {

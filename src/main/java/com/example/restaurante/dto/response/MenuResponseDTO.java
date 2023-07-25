@@ -1,6 +1,8 @@
-package com.example.restaurante.dto;
+package com.example.restaurante.dto.response;
 
-public class MenuResponseDTO extends MenuDTO{
+import com.example.restaurante.dto.general.MenuDTO;
+
+public class MenuResponseDTO extends MenuDTO {
     private String name;
 
     private Integer price;
@@ -8,6 +10,8 @@ public class MenuResponseDTO extends MenuDTO{
     private String url;
 
     private String description;
+
+    private String category;
 
 
     //Getters y setters
@@ -42,5 +46,13 @@ public class MenuResponseDTO extends MenuDTO{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
